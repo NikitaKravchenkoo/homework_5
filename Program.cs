@@ -1,4 +1,5 @@
 ﻿using System;
+using homeworkhelper;
 
 namespace homework_5
 {
@@ -6,7 +7,14 @@ namespace homework_5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                Console.WriteLine(numericalhelper.CalculateFormmula(10,5));
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
